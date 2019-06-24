@@ -1,0 +1,23 @@
+用户：user
+	create table user (
+	id varchar(32),
+	username varchar(32),
+	upwd varchar(32),
+	telphone varchar(16),
+	qq varchar(16),
+	email varchar(64) ,
+	schoolId varchar(32), #外键
+	schoolName varchar(64), #虽然不满足三大范式 但是 这样避免了多表关联
+	gender varchar(8),
+	birthdate varchar(32),
+	address varchar(128),
+	createDate varchar(64)
+	)
+援藏工作：work
+	create table work(
+	id varchar(32),
+	title varchar(255),
+	content text,
+	userId varchar(32), #发布作者
+	createDate varchar(64)
+	)
